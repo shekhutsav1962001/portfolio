@@ -25,6 +25,7 @@
             padding-top: calc(6rem + 74px);
             padding-bottom: 6rem;
             background-color: #0a192f;
+            transition: all 500ms ease-in-out;
         }
 
 
@@ -36,6 +37,7 @@
             background: rgba(10, 25, 47, 0.5);
             backdrop-filter: blur(5px);
             text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+            
         }
 
         .masthead .masthead-subheading {
@@ -166,9 +168,9 @@
 
         /* angular */
         .object7 {
-            top: 50%;
-            right: 50%;
-            height: 60px;
+            top: 55%;
+            left:25%;
+            height: 55px;
             animation: MoveDownUp 8s linear infinite;
         }
 
@@ -267,7 +269,14 @@
             font-size: 36px;
             margin-left: 50px;
         }
-
+        .navbtn{
+            position: fixed;
+            top: 0.5%;
+            left: 1%;
+            color: #f1f1f1;
+            background: rgba(10, 25, 47, 0.5);
+            backdrop-filter: blur(5px);
+        }
         @media screen and (max-height: 450px) {
             .sidenav {
                 padding-top: 15px;
@@ -276,17 +285,18 @@
             .sidenav a {
                 font-size: 18px;
             }
+
         }
-        .navbtn{
-            position: fixed;
-            top: 0.5%;
-            left: 0.5%;
-            color: #f1f1f1;
+        @media (max-width: 450px) {
+            .navbtn{
+                left: 4%;
+            }
         }
+       
     </style>
 </head>
 
-<body id="page-top">
+<body id="page-top" >
 
 
     <img class="object object1" src="assets/icons/icons8-mongodb.svg" alt="" srcset="">
@@ -320,7 +330,7 @@
 
 
     <!-- style="background-color: #0a192f;" -->
-    <header class="masthead  text-white text-center">
+    <header class="masthead  text-white text-center" id="hdr">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
             <img class="masthead-avatar mb-5" src="assets/img/1611504664286.png" alt="" />
@@ -351,10 +361,15 @@
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            document.getElementById("hdr").style.opacity = 0.3;
+            
         }
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "white";
+            document.getElementById("hdr").style.opacity =1;
         }
     </script>
     <!-- Core theme JS-->
