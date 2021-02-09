@@ -20,9 +20,9 @@ $(document).ready(function () {
         resolution: 512,
         dropRadius: 10
     });
-    $('#abc').ripples({
-        resolution: 512,
-        dropRadius: 10
-    });
+    // $('#abc').ripples({
+    //     resolution: 512,
+    //     dropRadius: 10
+    // });
 });
 
