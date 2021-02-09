@@ -112,7 +112,13 @@ html,body{
     background: rgba(10, 25, 47, 0.5);
     backdrop-filter: blur(5px);
 }
-
+.divider-custom .divider-custom-icon:hover{
+    -webkit-animation: rotating 500ms linear ;
+    -moz-animation: rotating 500ms linear ;
+    -ms-animation: rotating 500ms linear ;
+    -o-animation: rotating 500ms linear ;
+    animation: rotating 500ms linear ;
+}
 .divider-custom.divider-light .divider-custom-line {
     background-color: #fff;
 }
@@ -120,6 +126,35 @@ html,body{
 .divider-custom.divider-light .divider-custom-icon {
     color: #fff !important;
 }
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
 
 
 /* all sticker */
@@ -314,4 +349,5 @@ position: fixed;
 }
 
 
+  
   
