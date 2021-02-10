@@ -20,6 +20,26 @@
 
     <link rel="stylesheet" href="./plugins/headline/headline.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 998;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .overlay.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -35,8 +55,6 @@
         <a href="#" onclick="closeNav()">Contact</a>
     </div>
     <!-- <span style="font-size:30px;cursor:pointer" class="navbtn" onclick="openNav()">&#9776; </span> -->
-
-
 
 
 

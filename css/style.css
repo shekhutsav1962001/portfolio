@@ -5,12 +5,14 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    /* overflow-x: hidden; */
 }
 
 html,body{
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
  /************************************* scroll start****************************************************** */
         /* width */
@@ -304,13 +306,6 @@ html,body{
    
 } */
 
-#navbar{
-position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: block;
-}
 
 .sidenav {
     height: 100%;
@@ -347,10 +342,7 @@ position: fixed;
     margin-left: 50px;
 }
 
-.navbar{
-    background-color: #0a192f;
-    transition: all 500ms ease-in-out;
-}
+
 .navbtn{
     position: fixed;
     top: 0.5%;
@@ -359,6 +351,23 @@ position: fixed;
     color: #f1f1f1;
     background:transparent;
     /* backdrop-filter: blur(5px); */
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
 }
 @media screen and (max-height: 450px) {
     .sidenav {
