@@ -47,6 +47,7 @@ body{
     position: relative;
     padding-top: calc(6rem + 74px);
     padding-bottom: 5rem;
+    min-height: 100vh;
     /* background-color: #0a192f; */
     transition: all 500ms ease-in-out;
 }
