@@ -188,7 +188,7 @@ body{
 .object {
     /* animation: MoveUpDown 20s linear infinite; */
     position: absolute;
-
+    z-index: -1;
 }
 
 /* mongo */
