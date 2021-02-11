@@ -27,8 +27,12 @@ $(document).ready(function () {
     });
 
     // close navbar when click outside of nav
-    $('.overlay').on('click', function () {
-        closeNav();
-    });
+    // $('.overlay').on('click', function () {
+    //     closeNav();
+    // });
 });
-
+ 
+// close navbar when click outside of nav
+ $('.overlay').on('click', function () {
+    closeNav();
+});
