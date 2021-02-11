@@ -20,10 +20,87 @@
 
     <link rel="stylesheet" href="./plugins/headline/headline.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        #overlayer {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            background: #0a192f;
+        }
+
+        .loader {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            z-index: 3;
+            border: 4px solid #f1f1f1;
+            top: 50%;
+            left: 50%;
+            animation: loader 2s infinite ease;
+        }
+
+        .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #f1f1f1;
+            animation: loader-inner 2s infinite ease-in;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(180deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loader-inner {
+            0% {
+                height: 0%;
+            }
+
+            25% {
+                height: 0%;
+            }
+
+            50% {
+                height: 100%;
+            }
+
+            75% {
+                height: 100%;
+            }
+
+            100% {
+                height: 0%;
+            }
+        }
+    </style>
 </head>
 
 <body id="bodyid">
 
+    <div id="overlayer"></div>
+    <span class="loader">
+        <span class="loader-inner"></span>
+    </span>
 
 
     <!-- navbar -->
@@ -123,7 +200,6 @@
 
 
 
-
     <!-- needful scripts -->
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -175,6 +251,12 @@
         $('.overlay').on('click', function () {
             closeNav();
         });
+        window.addEventListener('load', function () {
+            // document.querySelector('body').classList.add("loaded")
+            $(".loader").delay(1000).fadeOut("slow");
+            $("#overlayer").delay(1000).fadeOut("slow");
+        });
+
     </script>
 </body>
 
