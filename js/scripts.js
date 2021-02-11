@@ -31,8 +31,15 @@ $(document).ready(function () {
     //     closeNav();
     // });
 });
- 
+
 // close navbar when click outside of nav
- $('.overlay').on('click', function () {
+$('.overlay').on('click', function () {
     closeNav();
+});
+
+
+window.addEventListener('load', function () {
+    // document.querySelector('body').classList.add("loaded")
+    $(".loader").delay(1000).fadeOut("slow");
+    $("#overlayer").delay(1000).fadeOut("slow");
 });
