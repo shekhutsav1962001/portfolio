@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sriracha');
-
+/* title */
+@import url('https://fonts.googleapis.com/css?family=Merienda');
 *{
     padding: 0;
     margin: 0;
@@ -405,7 +406,6 @@ body{
 
 #aboutme {
     background-color: #060b1b;
-    margin-bottom: 100px;
 }
 
 #aboutme p {
@@ -531,6 +531,7 @@ body{
     height: 140px;
     padding-top: 10px;
     width: 100%;
+    margin-bottom: 50px;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -585,3 +586,15 @@ body{
 } */
     
 /* *********************************************** SKILL END************************************** */
+
+
+/* *********************************************** MYTITLE END************************************** */
+
+.mytitle{
+    font-family: Merienda, cursive;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(241,241,241);
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+/* *********************************************** MYTITLE END************************************** */

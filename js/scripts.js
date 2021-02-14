@@ -21,11 +21,19 @@ $(document).ready(function () {
         resolution: 512,
         dropRadius: 10
     });
+    $('#about').ripples({
+        resolution: 512,
+        dropRadius: 10
+    });
     $('#aboutme').ripples({
         resolution: 512,
         dropRadius: 10
     });
-
+    $('#skills').ripples({
+        resolution: 512,
+        dropRadius: 10
+    });
+    
     // close navbar when click outside of nav
     // $('.overlay').on('click', function () {
     //     closeNav();

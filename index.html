@@ -32,7 +32,7 @@
     <!-- navbar -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#aboutme" onclick="closeNav()">About Me</a>
+        <a href="#about" onclick="closeNav()">About Me</a>
         <a href="#abc" onclick="closeNav()">Projects</a>
         <a href="#" onclick="closeNav()">Resume</a>
         <a href="#" onclick="closeNav()">Contact</a>
@@ -94,28 +94,25 @@
     </header>
 
 
-    <!-- temp div -->
-    <!-- /* background-color: #060b1b; */ -->
-    <!-- /* background-color:#151A33; */ -->
-    <div class="container center" id="aboutme">
-        <!-- <div class="overlay"></div> -->
-        <!-- <span style="font-size:30px;cursor:pointer" class="navbtn" onclick="openNav()">&#9776; </span> -->
-        <div class="row spacing">
-            <img class="col-10 col-sm-10 col-lg-5 col-md-5 center spacing" src="./assets/icons/user.svg">
-            <div class="col-10 col-sm-10 col-lg-7 col-md-7 center text-center spacing">
-                <h1 class="h1">Hi there!<span class="wave">👋</span></h1>
-                <h2 class="h2">I am Utsav Shekh</h2>
-                <p>I am pursuing Computer Engineering at Dharmsinh Desai University.
-                    I found my interest in Web development and I'm doing my best to learn new things regularly.
-                    Animation attracts me a lot.</p>
+    <section id="about">
+        <p class="h1 mytitle pt-5 mt-5">About me</p>
+        <div class="container center" id="aboutme">
+            <div class="row spacing">
+                <img class="col-10 col-sm-10 col-lg-5 col-md-5 center spacing" src="./assets/icons/user.svg">
+                <div class="col-10 col-sm-10 col-lg-7 col-md-7 center text-center spacing">
+                    <h1 class="h1">Hi there!<span class="wave">👋</span></h1>
+                    <h2 class="h2">I am Utsav Shekh</h2>
+                    <p>I am pursuing Computer Engineering at Dharmsinh Desai University.
+                        I found my interest in Web development and I'm doing my best to learn new things regularly.
+                        Animation attracts me a lot.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
-
-    <div style="height: 1000px;" id="abc">
-        this is teemp div
+    <section id="skills" class="py-5">
+        <p class="h1 mytitle pb-3">skills</p>
         <div class="items">
             <div class="item item1">HTML</div>
             <div class="item item2">CSS</div>
@@ -140,7 +137,11 @@
             <div class="item item21">.NET Core</div>
             <div class="item item22">ASP.NET</div>
         </div>
-    </div>
+    </section>
+
+
+
+    <div style="height: 1000px;background-color: blueviolet;" id="abc">this is tempdiv</div>
 
     <!-- navbutton -->
     <span style="font-size:30px;cursor:pointer" class="navbtn" id="navbtn" onclick="openNav()">&#9776; </span>
