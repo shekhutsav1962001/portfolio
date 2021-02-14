@@ -94,8 +94,8 @@
         }
 
         .items {
-            height: 500px;
-            padding: 100px;
+            height: 140px;
+            padding-top: 10px;
             width: 100%;
             /* border: 1px solid black; */
             overflow-x: scroll;
@@ -109,50 +109,67 @@
             position: relative;
             /* background: rgba(255, 255, 255, 0.1); */
             font-size: 0;
-            perspective: 500px;
+            /* perspective: 500px; */
         }
 
-        .items.active {
-            /* background: rgba(255,255,255,0.3); */
-            /* background: red; */
-            cursor: grabbing;
-            cursor: -webkit-grabbing;
-            transform: scale(1);
-        }
 
         .item {
-            width: 200px;
+            width: 160px;
             margin-left: 10px;
-            height: calc(100% - 40px);
+            height:  100px;
             display: inline-flex;
             align-items: center;
+            
             justify-content: center;
             font-size: 20px;
-            font-weight: 100;
+            font-weight: 400;
             color: #0a192f;
             background: #e1e1e1;
-            box-shadow: inset 0 0 0 10px rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.15);
+            transition: all .3s;
         }
+        .item:hover{
+            letter-spacing: 1.5px;
+            /* transform: scale(1.07); */
+            /* background:#b1c2d4; */
+            /* background-color: #0a192f; */
+            background-color: #060b1b;
+            box-shadow: 0px 10px 10px rgba(241, 240, 241,0.5) ;
+            color: #f1f1f1;
+            /* box-shadow: none; */
 
+        }
+       
+        /* //////////////////////////// */
         .items::-webkit-scrollbar {
-            display: none;
+            height: 10px;
         }
 
+        /* Track */
+        .items::-webkit-scrollbar-track {
+            background-color: #0a192f;
+
+        }
+
+        /* Handle */
+        .items::-webkit-scrollbar-thumb {
+            background: #f1f1f1;
+            /* border-radius: 10px; */
+        }
+
+        /* ********************************************* */
+         /* .items::-webkit-scrollbar { */
+            /* display: none; */
+        /* } */
         /* Hide scrollbar for IE, Edge and Firefox */
-        .items {
-            -ms-overflow-style: none;
+        /* .items { */
+            /* -ms-overflow-style: none; */
             /* IE and Edge */
-            scrollbar-width: none;
+            /* scrollbar-width: none; */
             /* Firefox */
-        }
-
-        /* .item:nth-child(even) {
-            transform: scaleX(1.31) rotateY(-40deg);
-        }
-
-        .item:nth-child(odd) {
-            transform: scaleX(1.31) rotateY(40deg);
-        } */
+        /* } */
+            
+     
     </style>
 </head>
 
@@ -253,37 +270,28 @@
         this is teemp div
         <div class="items">
             <div class="item item1">HTML</div>
-            <div class="item item2">
-                <!-- <img style="height: 30px;" src="assets/icons/icons8-css3.svg" alt="" srcset=""> -->
-              CSS
-              <!-- <div class="row">
-              </div> -->
-            </div>
-            <div class="item item3">JAVASCRIPT</div>
-            <div class="item item4">JQuery</div>
+            <div class="item item2">CSS</div>
+            <div class="item item3">JavaScript</div>
+            <div class="item item4">jQuery</div>
             <div class="item item5">Typescript</div>
-            <div class="item item6">NodeJS</div>
-            <div class="item item7">Express</div>
+            <div class="item item6">Node.js</div>
+            <div class="item item7">Express.js</div>
             <div class="item item8">Angular</div>
             <div class="item item9">Bootstrap</div>
-            <div class="item item10">PYTHON</div>
-            <div class="item item11">DJANGO</div>
+            <div class="item item10">Python</div>
+            <div class="item item11">Django</div>
             <div class="item item12">PHP</div>
-            
-            <div class="item item13">c</div>
-            <div class="item item14">c++</div>
+            <div class="item item13">C</div>
+            <div class="item item14">C++</div>
             <div class="item item15">C#</div>
             <div class="item item16">Java</div>
             <div class="item item17">MySQL</div>
             <div class="item item18">MongoDB</div>
             <div class="item item19">SQLite</div>
             <div class="item item20">EF Core</div>
-            <div class="item item21">.NET CORE</div>
+            <div class="item item21">.NET Core</div>
             <div class="item item22">ASP.NET</div>
-            <div class="item item23">23</div>
-            <div class="item item24">24</div>
-            <div class="item item25">25</div>
-          </div>
+        </div>
     </div>
 
     <!-- navbutton -->
@@ -362,35 +370,35 @@
             prevScrollpos = currentScrollPos;
         }
 
-         const slider = document.querySelector('.items');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+        // const slider = document.querySelector('.items');
+        // let isDown = false;
+        // let startX;
+        // let scrollLeft;
 
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
+        // slider.addEventListener('mousedown', (e) => {
+        //     isDown = true;
+        //     slider.classList.add('active');
+        //     startX = e.pageX - slider.offsetLeft;
+        //     scrollLeft = slider.scrollLeft;
+        // });
 
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
+        // slider.addEventListener('mouseleave', () => {
+        //     isDown = false;
+        //     slider.classList.remove('active');
+        // });
 
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
+        // slider.addEventListener('mouseup', () => {
+        //     isDown = false;
+        //     slider.classList.remove('active');
+        // });
 
-  slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;  // stop the fn from running
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3;
-    slider.scrollLeft = scrollLeft - walk;
-  });
+        // slider.addEventListener('mousemove', (e) => {
+        //     if (!isDown) return;  // stop the fn from running
+        //     e.preventDefault();
+        //     const x = e.pageX - slider.offsetLeft;
+        //     const walk = (x - startX) * 3;
+        //     slider.scrollLeft = scrollLeft - walk;
+        // });
     </script>
 </body>
 
