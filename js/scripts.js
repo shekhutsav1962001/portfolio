@@ -65,3 +65,10 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
+
+// hide skillls scrollbar in firefox
+var isFirefox = typeof InstallTrigger !== 'undefined';
+if(isFirefox)
+{
+    document.getElementById("items").classList.add('hidescrollbar');
+}
