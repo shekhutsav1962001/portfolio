@@ -17,9 +17,18 @@ html,body{
     margin: 0;
     scroll-behavior: smooth;
     overflow-x: hidden;
+      user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 body{
     background-color: #0a192f;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    cursor: text;
 }
  /************************************* scroll start****************************************************** */
         /* width */
