@@ -286,6 +286,23 @@ h1,h2,h3,h4,h5,h6,p{
     animation: MoveUpDown 10s linear infinite;
 }
 
+/* react */
+.object11 {
+    top: 25%;
+    right: 25%;
+    height: 35px;
+    animation: MoveUpDown 10s linear infinite;
+}
+
+
+/* firbase */
+.object12 {
+    bottom: 12%;
+    left: 20%;
+    height: 35px;
+    animation: MoveUpDown 10s linear infinite;
+}
+
 @keyframes MoveUpDown {
 
     0%,
@@ -313,6 +330,16 @@ h1,h2,h3,h4,h5,h6,p{
 @media (max-width: 992px) {
     .object7 {
         height: 40px;
+    }
+
+}
+@media (max-width: 700px) {
+    .object3 {
+        height: 20px;
+    }
+    .object11
+    {
+        height: 20px;
     }
 
 }
